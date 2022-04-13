@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/pecha-kucha-timer/static/js/main.fa5158bb.js",
+    "index.html": "/pecha-kucha-timer/index.html",
+    "main.fa5158bb.js.map": "/pecha-kucha-timer/static/js/main.fa5158bb.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.fa5158bb.js"
+  ]
+}
