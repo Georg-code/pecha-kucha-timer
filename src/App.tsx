@@ -1,22 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useForm } from "react-hook-form";
 
 function App() {
-  const start = (e: React.FormEvent<HTMLDivElement>) => {
-    e.preventDefault();
-    console.log(e);
-  };
+  useEffect(() => {
+    setInterval(() => {
+      window.navigator.vibrate(1000);
+    }, 19000);
+  }, []);
 
   return (
-    <div className="App" onSubmit={(e) => start(e)}>
-      <form>
-        <input
-          name="untilStart"
-          type="number"
-          placeholder="Zeit bis zum Start"
-        ></input>
-        <input name="intervall" type="number" placeholder="Intervall"></input>
-        <button type="submit">Starten</button>
-      </form>
+    <div className="App">
+      <h1>Presentation Vibrator</h1>
     </div>
   );
 }
