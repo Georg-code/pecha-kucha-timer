@@ -1,24 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
 function App() {
+  const start = (e: React.FormEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    console.log(e);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" onSubmit={(e) => start(e)}>
+      <form>
+        <input
+          name="untilStart"
+          type="number"
+          placeholder="Zeit bis zum Start"
+        ></input>
+        <input name="intervall" type="number" placeholder="Intervall"></input>
+        <button type="submit">Starten</button>
+      </form>
     </div>
   );
 }
